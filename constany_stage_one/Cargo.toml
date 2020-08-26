@@ -1,6 +1,6 @@
 [package]
 name = "constany_stage_one"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["moelife-coder <61054382+moelife-coder@users.noreply.github.com>"]
 edition = "2018"
 description = "Convert any function to constant"
@@ -15,5 +15,5 @@ categories = ["development-tools"]
 proc-macro = true
 
 [dependencies]
-syn = {version = "1.0", features = ["full", "extra-traits"]}
+syn = {version = "1.0", features = ["full"]}
 quote = "1.0"

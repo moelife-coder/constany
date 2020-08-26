@@ -1,6 +1,6 @@
 [package]
 name = "constany_blank"
-version = "1.0.1"
+version = "1.0.2"
 authors = ["moelife-coder <61054382+moelife-coder@users.noreply.github.com>"]
 edition = "2018"
 description = "Convert any function to constant"
@@ -13,7 +13,3 @@ categories = ["development-tools"]
 
 [lib]
 proc-macro = true
-
-[dependencies]
-syn = {version = "1.0", features = ["full", "extra-traits"]}
-quote = "1.0"

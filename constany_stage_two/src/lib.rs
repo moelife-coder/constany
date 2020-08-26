@@ -61,7 +61,6 @@ pub fn const_fn(_: TokenStream, bare_item: TokenStream) -> TokenStream {
             return constructed.into();
         }
     }
-    println!("{}", &format!("target/{}.hash", item.sig.ident.to_string()));
     panic!("Constany stage one file not found or it's obsolete. Please run stage one again.");
 }
 #[proc_macro_attribute]
