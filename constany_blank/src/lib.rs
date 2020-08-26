@@ -1,4 +1,4 @@
-//! ## Please refer to `constany_stage_one` document.
+//! **Please refer to [`constany_stage_one` document](https://docs.rs/constany_stage_one/0.1.0/constany_stage_one/).**
 //! This crate is a blank implementation for `constany` to satisfy grammar checker and avoid conflict.
 
 extern crate proc_macro;

@@ -1,4 +1,4 @@
-//! ## Please refer to `constany_stage_one` document.
+//! **Please refer to [`constany_stage_one` document](https://docs.rs/constany_stage_one/0.1.0/constany_stage_one/).**
 //! This crate is for the second stage of constany build, which will generate the final constant function based on stage one artifact.
 
 extern crate proc_macro;
