@@ -1,5 +1,7 @@
 # Constany: convert any rust function to const function
 
+![Stage One](https://img.shields.io/crates/v/constany_stage_one) ![License](https://img.shields.io/crates/l/constany_stage_one) ![Downloads](https://img.shields.io/crates/d/constany_blank)
+
 > Constany allows you to build const (or at least pseudo-const) function out of any expression
 
 In rust, const functions are a type of functions that interpreted by the compiler at compile time. Const functions have various restrictions to make sure that they can be evaluated at compile time. For most of the time, these restrictions are beneficial because it prevent misuse. However, sometimes the use is intended:
