@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "constany_stage_one",
+    "constany_stage_two",
+    "constany_blank"
+]

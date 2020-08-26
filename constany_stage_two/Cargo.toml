@@ -1,0 +1,19 @@
+[package]
+name = "constany_stage_two"
+version = "0.1.0"
+authors = ["moelife-coder <61054382+moelife-coder@users.noreply.github.com>"]
+edition = "2018"
+description = "A short description of my package"
+repository = "https://github.com/moelife-coder/constany/"
+license = "AGPL-3.0-only"
+keywords = ["function", "compile", "static", "size", "macro"]
+categories = ["development-tools"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = {version = "1.0", features = ["full", "extra-traits"]}
+quote = "1.0"
