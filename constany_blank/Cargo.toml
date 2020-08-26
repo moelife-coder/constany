@@ -1,6 +1,6 @@
 [package]
 name = "constany_blank"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["moelife-coder <61054382+moelife-coder@users.noreply.github.com>"]
 edition = "2018"
 description = "Convert any function to constant"
