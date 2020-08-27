@@ -181,7 +181,7 @@ pub fn const_fn(attr: TokenStream, bare_item: TokenStream) -> TokenStream {
         )
     } else {
         let a = quote::format_ident!("{}", name.to_string());
-        if attr.to_string() == "memop" {
+        if attr.to_string().contains("memop") {
             let output_type = match output_type {
                 syn::ReturnType::Default => unimplemented!(),
                 syn::ReturnType::Type(_, j) => j,
