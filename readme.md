@@ -108,7 +108,7 @@ Make sure `main` function is marked with `constany::main_fn()` and the constant 
 When you need to build the function, execute:
 
 ```bash
-$ cargo run --featues stage_one
+$ cargo run --features stage_one
 $ cargo build --features stage_two // If you want to run the code instead, use `cargo run`
 ```
 
