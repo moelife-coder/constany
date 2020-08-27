@@ -9,5 +9,5 @@ fn main() {
         .env("NO_BUILD", "true")
         .status()
         .unwrap();
-    println!("cargo:rustc-cfg=stage_two");
+    println!("cargo:rustc-cfg=feature=\"stage_two\"");
 }
