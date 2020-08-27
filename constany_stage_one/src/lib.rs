@@ -204,15 +204,11 @@ pub fn const_fn(attr: TokenStream, bare_item: TokenStream) -> TokenStream {
             )
         }
     };
-    let hash_file_name = format!("target/{}.hash", name.to_string());
-    let code_identifier = bare_item.to_string();
+    let code_hash = seahash::hash(bare_item.to_string().as_bytes());
     let generated = quote! {
         #item
-        /// Wrapper fn for previous function
-        #visibility fn #wrapper_fn_name() -> (String, u8) {
-            // Write identifier to target
-            std::fs::write(#hash_file_name, #code_identifier).unwrap();
-            (#generation_method, #fbyte)
+        #visibility fn #wrapper_fn_name() -> (String, u8, u64) {
+            (#generation_method, #fbyte, #code_hash)
         }
     };
     generated.into()
@@ -234,7 +230,7 @@ pub fn main_fn(attr: TokenStream, item: TokenStream) -> TokenStream {
         if i != "," {
             let fn_name = &i[1..i.len() - 1];
             let wrapper_fn_name = quote::format_ident!("_{}_wrapper_fn", fn_name.to_string());
-            fn_vec.push((wrapper_fn_name, format!("target/{}.result", fn_name)));
+            fn_vec.push((wrapper_fn_name, format!("target/{}.res", fn_name)));
         }
     }
     let mut generated = quote! {};
@@ -242,8 +238,9 @@ pub fn main_fn(attr: TokenStream, item: TokenStream) -> TokenStream {
         let (i, j) = i;
         generated = quote! {
             #generated
-            let (j, i) = #i();
+            let (j, i, k) = #i();
             let mut constructed = vec![i];
+            constructed.extend_from_slice(&k.to_be_bytes());
             constructed.extend_from_slice(&j.into_bytes());
             std::fs::write(#j, constructed).unwrap();
         }
