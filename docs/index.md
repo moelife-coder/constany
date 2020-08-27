@@ -50,7 +50,7 @@ Constany use a workaround for this: the function marked as `constany::const_fn` 
 
 **WARNING: library support is not implemented yet. PRs are welcomed.**
 
-**Starting from version 0.2, `constany_stage_one` and `constany_stage_two` is not optional depencies.**
+**Starting from version 0.2, `constany_stage_one` and `constany_stage_two` are not optional depencies anymore. This will not affect built binary size.**
 
 Using constany is a bit tricker than normal library.
 
